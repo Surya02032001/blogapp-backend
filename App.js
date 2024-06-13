@@ -40,10 +40,10 @@ app.post("/signin", (req, res) => {
 
                             { email: input.emailId }, "blog-app", { expiresIn: "1d" }, (error, token) => {
                                 if (error) {
-                                    res.json({"status":"unable to create token"})
+                                    res.json({ "status": "unable to create token" })
 
                                 } else {
-                                    res.json({"status":"success","userId":response[0]._id,"token":token})
+                                    res.json({ "status": "success", "userId": response[0]._id, "token": token })
 
                                 }
 
